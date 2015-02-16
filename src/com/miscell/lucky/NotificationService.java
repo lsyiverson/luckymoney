@@ -1,5 +1,9 @@
 package com.miscell.lucky;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.os.Bundle;
@@ -7,15 +11,13 @@ import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 import android.text.TextUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by chenjishi on 15/2/13.
  */
-@SuppressWarnings("NewApi")
+@SuppressLint("NewApi")
 public class NotificationService extends NotificationListenerService {
 
+    @SuppressLint("NewApi")
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
         Notification notification = sbn.getNotification();
